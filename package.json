@@ -4,7 +4,8 @@
   "description": "### Angelica Reyes",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
@@ -12,5 +13,8 @@
   "dependencies": {
     "@jworkman-fs/asl": "^1.2.43",
     "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
   }
 }

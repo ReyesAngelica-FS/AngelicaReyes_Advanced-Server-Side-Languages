@@ -2,8 +2,6 @@
 
 const express = require('express');
 const router = express.Router();
-
-// Import controller functions
 const {
     getAllContacts,
     getContactById,
@@ -12,19 +10,19 @@ const {
     deleteContact
 } = require('../controllers/contactsController');
 
-// GET all contacts (supports filtering, sorting, pagination)
+// GET all contacts
 router.get('/', getAllContacts);
 
-// GET a specific contact by ID
+// GET contact by ID
 router.get('/:id', getContactById);
 
-// POST a new contact
+// POST new contact
 router.post('/', createContact);
 
-// PUT (update) a contact by ID
+// PUT update contact
 router.put('/:id', updateContact);
 
-// DELETE a contact by ID
+// DELETE contact
 router.delete('/:id', deleteContact);
 
 module.exports = router;

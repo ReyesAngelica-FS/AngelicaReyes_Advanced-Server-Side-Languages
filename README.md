@@ -7,12 +7,12 @@
 📪 &nbsp; areyes10@student.fullsail.edu
 
 
-Module 1 - 
+Module 2 - 
 
-⚙️ Overview - This week, I focused on my ASL Docker assignment, where I created individual Docker containers for multiple programming languages including Python, PHP, Ruby, NodeJS, Rust, Lua, C++, and Java. Each container was configured to display "Hello ASL!" and the current date using that language's syntax.
+⚙️ Overview - This week, I focused on building a fully RESTful API using ExpressJS to manage a digital contact book. I implemented all CRUD operations for the /contacts endpoint and enhanced it with advanced features like filtering, sorting, and pagination using the @jworkman-fs/asl package. I also containerized the app using Docker and configured it to run and test properly.
 <br>
-🌵 Challenges - What problems did I have & how I'm addressing them: One challenge I faced was running Docker containers correctly — I accidentally used incorrect syntax in my docker run command, which caused execution errors. I also initially struggled with compiled languages like Rust and C++, especially with understanding when to use RUN vs CMD and how to compile code inside containers. 
+🌵 Challenges - One of the biggest challenges I encountered was installing the @jworkman-fs/wdv-cli package, which is required to generate the test file. Due to compatibility issues with macOS ARM64 and newer versions of Node, I received multiple build errors related to node-libcurl. I addressed this by switching Node versions with NVM, and I plan to move the installation into a Docker container where it’s more stable. I also had to fine-tune my file structure and package.json to ensure the app ran correctly and tests could be executed.
 <br>
-🏆 Accomplishments - What is something I "leveled up" on this week: I definitely leveled up my Docker skills, especially in building and managing containers for different programming languages. 
+🏆 Accomplishments - I leveled up my understanding of Express routing, middleware, and modular controller logic. I successfully implemented advanced route behaviors like query-based filtering and pagination using external utilities from the @jworkman-fs/asl library. 
 <br>
-🔮 Next Steps - What I plan to prioritize and do next: Next, I’ll focus on recording my screen demo showing each container’s output, making sure each language prints "Hello ASL!" and the current date. 
+🔮 Next Steps - Next, I plan to finalize the test integration inside Docker to ensure all requirements are met and test cases pass. I'll also push my completed project to GitHub under the assignments/contacts branch and record a walkthrough video showing the test suite passing. From there, I'll continue strengthening my backend API skills, especially around error handling and environment configuration.

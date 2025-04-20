@@ -11,7 +11,6 @@ app.use(express.json()); // Parses incoming JSON requests
 const contactsRoutes = require('./routes/contactsRoutes');
 app.use('/contacts', contactsRoutes);
 
-// Default root route (optional)
 app.get('/', (req, res) => {
     res.send('Contacts API is running!');
 });
