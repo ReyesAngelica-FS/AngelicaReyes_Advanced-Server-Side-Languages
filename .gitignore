@@ -1,0 +1,38 @@
+# Node modules
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# dotenv environment variables (if used later)
+.env
+
+# Testing outputs
+coverage/
+*.lcov
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Docker related (if using Docker)
+*.pid
+*.seed
+*.bak
+
+# Editor and IDE folders
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Jest test cache
+jest-cache/
+jest-config/
+jest-html-reporter/
+
+docker-compose.override.yml
