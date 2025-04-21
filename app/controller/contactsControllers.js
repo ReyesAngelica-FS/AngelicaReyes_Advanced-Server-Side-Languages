@@ -1,14 +1,12 @@
-// controllers/contactsController.js
-
 const {
     ContactModel,
     Pager,
     sortContacts,
     filterContacts
-    } = require('@jworkman-fs/asl');
+} = require('@jworkman-fs/asl');
 
 // Clone contacts to avoid mutating original data
-    let contacts = [...ContactModel];
+let contacts = [...ContactModel];
 
 // GET /contacts
     const getAllContacts = (req, res) => {
