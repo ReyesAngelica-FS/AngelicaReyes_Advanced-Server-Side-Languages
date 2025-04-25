@@ -8,7 +8,7 @@ const {
     createContact,
     updateContact,
     deleteContact
-} = require('../controllers/contactController');
+} = require('../controller/contactsControllers');
 
 // Base route: /contacts
 
