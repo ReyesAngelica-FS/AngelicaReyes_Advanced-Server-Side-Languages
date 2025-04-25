@@ -1,28 +1,31 @@
-// routes/contactsRoutes.js
-
 const express = require('express');
 const router = express.Router();
+
+// Import controller functions
 const {
     getAllContacts,
     getContactById,
     createContact,
     updateContact,
     deleteContact
-} = require('../controller/contactsControllers');
+} = require('../controllers/contactController');
 
-// GET all contacts
+// Base route: /contacts
+
+// GET all contacts (supports filtering, sorting, pagination)
 router.get('/', getAllContacts);
 
-// GET contact by ID
+// GET a single contact by ID
 router.get('/:id', getContactById);
 
-// POST new contact
+// POST a new contact
 router.post('/', createContact);
 
-// PUT update contact
+// PUT (update) an existing contact by ID
 router.put('/:id', updateContact);
 
-// DELETE contact
+// DELETE a contact by ID
 router.delete('/:id', deleteContact);
 
+// Export the router so it can be used in server.js
 module.exports = router;

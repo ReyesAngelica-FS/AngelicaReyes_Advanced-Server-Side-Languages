@@ -1,26 +1,23 @@
-# Use Node.js image
-FROM node:18
+# Use the official Node.js 20 image
+FROM node:20
 
-# Set the working directory inside the container
+# Create and set working directory
 WORKDIR /usr/src/app
 
-# Copy dependency files first
+# Copy package.json and lock file first for caching
 COPY package*.json ./
 
-# Install project dependencies
+# Install dependencies
 RUN npm install
 
-# Install CLI globally
-RUN npm install -g @jworkman-fs/wdv-cli
+# Install nodemon globally (for hot-reload in dev)
+RUN npm install -g nodemon
 
-# Install nodemon for auto-restart during development
-RUN npm install --save-dev nodemon
-
-# Copy the rest of the app
+# Copy rest of your app
 COPY . .
 
-# Expose the port the app runs on
+# Expose port 8080
 EXPOSE 8080
 
-# Use nodemon for development
-CMD ["npx", "nodemon", "server.js"]
+# Default command
+CMD ["nodemon", "server.js"]

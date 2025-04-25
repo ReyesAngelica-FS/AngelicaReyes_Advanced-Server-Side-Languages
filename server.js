@@ -2,12 +2,12 @@ const express = require('express');
 const app = express();
 const PORT = 8080;
 
-// Middleware
 app.use(express.json());
 
-const contactsRoutes = require('./app/routes/contactRoutes');
+// Import and use the routes
+const contactRoutes = require('./app/routes/contactRoutes'); 
 
-app.use('/contacts', contactsRoutes);
+app.use('/contacts', contactRoutes);
 
 // Root route (optional)
 app.get('/', (req, res) => {
@@ -15,5 +15,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
+    console.log(`🚀 Server running at http://localhost:${PORT}`);
 });
